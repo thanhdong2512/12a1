@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Hình Ảnh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .slider-images {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .next-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .next-btn:hover {
+        background-color: #ff5722;
+    }
+</style>
+
+<body>
+
+    <div class="slider-container">
+        <div class="slider-images">
+            <img src="image1.jpg" alt="Hình ảnh 1" class="slide">
+            <img src="image2.jpg" alt="Hình ảnh 2" class="slide">
+            <img src="image3.jpg" alt="Hình ảnh 3" class="slide">
+        </div>
+        <button class="next-btn">Kế Tiếp</button>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const nextButton = document.querySelector('.next-btn');
+
+        function showNextSlide() {
+            currentIndex++;
+            if (currentIndex >= slides.length) {
+                currentIndex = 0;
+            }
+
+            const slideWidth = slides[0].clientWidth;
+            const offset = -currentIndex * slideWidth;
+            document.querySelector('.slider-images').style.transform = `translateX(${offset}px)`;
+        }
+
+        nextButton.addEventListener('click', showNextSlide);
+    </script>
+</body>
+
+</html>

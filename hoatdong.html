@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Thành viên Lớp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .member-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .member {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            /* Thêm hiệu ứng cho box-shadow */
+        }
+
+        .member img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            /* Hình tròn */
+            transition: transform 0.3s;
+            /* Hiệu ứng cho ảnh */
+        }
+
+        .member:hover {
+            transform: scale(1.05) rotate(5deg);
+            /* Phóng to và xoay nhẹ khi hover */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            /* Tăng độ bóng khi hover */
+        }
+
+        .member:hover img {
+            transform: scale(1.1);
+            /* Phóng to ảnh khi hover */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Giới thiệu Thành viên Lớp</h1>
+    </header>
+
+    <main>
+        <div class="member-container">
+            <!-- Giáo viên -->
+            <div class="member">
+                <img src="https://via.placeholder.com/150" alt="Giáo viên">
+                <h3>Nguyễn Văn X</h3>
+                <p>Giáo viên chủ nhiệm</p>
+            </div>
+
+            <!-- Các thành viên -->
+            <div class="member"><img src="https://via.placeholder.com/150" alt="Nguyễn Văn A">
+                <h3>Nguyễn Văn A</h3>
+                <p>Học sinh lớp 10A1</p>
+            </div>
+            <div class="member"><img src="https://via.placeholder.com/150" alt="Trần Thị B">
+                <h3>Trần Thị B</h3>
+                <p>Học sinh lớp 10A1</p>
+            </div>
+            <div class="member"><img src="https://via.placeholder.com/150" alt="Lê Văn C">
+                <h3>Lê Văn C</h3>
+                <p>Học sinh lớp 10A1</p>
+            </div>
+            <div class="member"><img src="https://via.placeholder.com/150" alt="Phạm Thị D">
+                <h3>Phạm Thị D</h3>
+                <p>Học sinh lớp 10A1</p>
+            </div>
+            <div class="member"><img src="https://via.placeholder.com/150" alt="Nguyễn Văn E">
+                <h3>Nguyễn Văn E</h3>
+                <p>Học sinh lớp 10A1</p>
+            </div>
+            <div class="member"><img src="https://via.placeholder.com/150" alt="Trần Văn F">
+                <h3>Trần Văn F</h3>
+                <p>Học sinh lớp 10A1</p>
+            </div>
+            <div class="member"><img src="https://via.placeholder.com/150" alt="Lê Thị G">
+                <h3>Lê Thị G</h3>
+                <p>Học sinh lớp 10A1</p>
+            </div>
+            <div class="member"><img src="https://via.placeholder.com/150" alt="Nguyễn Văn H">
+                <h3>Nguyễn Văn H</h3>
+                <p>Học sinh lớp 10A1</p>
+            </div>
