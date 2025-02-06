@@ -4,80 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>12A1-Nơi Tri Thức Gặp Niềm Vui</title>
+    <meta name="description" content="Giới thiệu lớp 12a1 ">
+    <title>12A1 </title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script defer src="./js/main.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="img/anhlogo.png " alt=" logo lớp 12a1">
-        </div>
-        <div class="search">
-        </div>
-        <nav id="navvv">
-            <ul>
-                <a href="index.html.html">Trang chủ </a>
-                <a href="thanhvien.html">Thành viên</a>
-                <a href="hoatdong.html">Hoạt động của lớp</a>
-                <a href="camnghi.html">Cảm nghĩ</a>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Tập Thể Lớp 12A1 </h1>
+    </div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <h2 class="logo"><span>12A1 </span>Nơi Tri Thức Gặp Niềm Vui </h2>
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="thanhvien.html">Thành Viên</a></li>
+                <li><a href="thanhtich.html">Những kỉ Niệm </a></li>
+                <li><a href="camnghi.html">Cảm Nghĩ </a></li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <i class="fa fa-user"></i>
-            <input type="text" placeholder="Tìm...">
-            <button>Tìm kiếm</button>
-        </div>
     </header>
-    <div class="promo-banner">12A1-Nơi Tri Thức Gặp Niềm Vui</div>
-    <main>
-        <aside>
-            <p>Thứ năm, ngày 16-01-2025</p>
-            <p>TP. Hồ Chí Minh ...</p>
-            <ul>
-                <li>Tên bài báo</li>
-                <li>Tên bài báo</li>
-                <li>Tên bài báo</li>
-                <li>Tên bài báo</li>
-            </ul>
-        </aside>
-        <section>
-            <div class="home">
-                <nav>
-                    <ul>
-                        <a href="/">
-                            <i class="fa fa-home"></i>
-                        </a>
-                </nav>
-            </div>
-            <article>
-                <h2>Tinh thần đoàn kết của cả lớplớp</h2>
-                <p>Những hình ảnh, những kỉ niệm ở cạnh nhaunhau</p>
-                <div class="imager">
-                    <img src="" alt="">Hìnhh ảnh</img>
-                </div>
-            </article>
-            <div class="grid">
-                <div class="grid-item">
-                    <img src="" alt="">Tên bài báo
-                </div>
-                <div class="grid-item">
-                    <img src="" alt="">ảnh công viên
-                </div>
-                <div class="grid-item">
-                    <img src="" alt="">Hình trường học
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="hero-content">
+            <h2>Hi, <span>Everyone </span> </h2>
+            <h4>Chào Mừng Đến Với Tập Thể Lớp 12A1</h4>
+            <div class="box ">
+                <div class="dropdown">See More
+                    <span class="left-icon"></span>
+                    <span class="right-icon"></span>
+                    <div class="items">
+                        <a href="thanhvien.html" style="--i:1;"><span></span>Thành Viên </a>
+                        <a href="thanhtich.html" style="--i:2;"><span></span>Thành Tích</a>
+                        <a href="camnghi.html" style="--i:3;"><span></span>Cảm Nghĩ </a>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Liên hệ</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Tên của bạn" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Thông điệp" required></textarea>
+            <button type="submit" class="btn">Gửi</button>
+        </form>
+    </section>
+    <!-- Footer -->
     <footer>
-        <div class="contact">
-            <a href="tel:+84123456789"><i class="fa fa-phone"></i></a>
-            <a href="mailto:your_email@example.com"><i class="fa fa-comment"></i></a>
-            <a href="https://zalo.me/your_zalo_id"><i class="fa fa-zalo"></i></a>
+        <div class="contact-buttons">
+            <a href="https://www.facebook.com/thienkenz2k5?mibextid=wwXIfr&rdid=ngO7LYwE5keNQhnZ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Af1ZBd552%2F%3Fmibextid%3DwwXIfr"
+                target="_blank" class="contact-btn facebook">
+                Facebook
+            </a>
+            <a href="https://chat.zalo.me/" target="_blank" class="contact-btn zalo">
+                Zalo
+            </a>
+            <a href="sms:+84347847462 " class="contact-btn sms">
+                SMS
+            </a>
         </div>
     </footer>
+
 </body>
 
 </html>

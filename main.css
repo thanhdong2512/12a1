@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3cefb8, #00bcd4);
+}
+/* Overlay effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  transform-origin: center;
+  animation: slideUp 2s ease-in-out forwards;
+  z-index: 10;
+}
+
+/* Text Content */
+.content {
+  z-index: 1;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards 1.5s;
+}
+
+/* Keyframes for animations */
+@keyframes slideUp {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.logo {
+  font-size: x-small;
+  color: #555;
+  cursor: default;
+}
+.logo span {
+  font-size: 4em;
+  color: #7d2ae8;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+a:after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: aqua;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+/* Header */
+.header {
+  background-color: #9ca9c8;
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Home Section */
+.home {
+  height: 100vh;
+  background: url("anhtapthelop.jpg ") no-repeat center center/cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content h2 {
+  font-size: 3em;
+  color: rgb(100, 101, 191);
+  font-family: Trebuchet MS;
+  margin-top: -200px; /* Loại bỏ khoảng cách bên trên */
+  /* padding-top: -100px;  Loại bỏ phần đệm bên trên */
+}
+.hero-content h2 span {
+  color: #7d2ae8;
+}
+.hero-content h4 {
+  font-size: 2em;
+  padding: 10px 40px 0;
+  margin-bottom: -40px;
+}
+.box {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+.dropdown {
+  position: relative;
+  top: 100px; /* Đưa khối "See More" vào giữa chiều cao hình ảnh */
+  left: 350px; /* Đưa khối "See More" vào giữa chiều rộng hình ảnh */
+  transform: translate(-50%, -50%); /* Căn giữa chính xác */
+  width: 250px;
+  height: 60px;
+  width: 250px;
+  height: 60px;
+  background: #7f0099;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown .left-icon,
+.dropdown .right-icon {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 15px;
+  height: 5px;
+  background: #fff;
+  border-radius: 40px;
+  transition: 0.5s;
+}
+
+.dropdown .left-icon {
+  left: 7px;
+  transform: rotate(45deg);
+}
+
+.dropdown.active .left-icon {
+  transform: rotate(135deg);
+}
+
+.dropdown .right-icon {
+  transform: rotate(-45deg);
+}
+
+.dropdown.active .right-icon {
+  transform: rotate(-135deg);
+}
+.dropdown .items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  margin-top: 63px;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.dropdown.active .items {
+  visibility: visible;
+}
+
+.dropdown .items a {
+  position: relative;
+  left: 100%;
+  display: flex;
+  font-size: 20px;
+  background: #fff;
+  color: #7f0099;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 2.5px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  transition-delay: calc(60ms * var(--i));
+}
+
+.dropdown.active .items a {
+  left: 0;
+}
+
+.dropdown .items a:hover {
+  color: #fff;
+}
+
+.dropdown .items a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #bb00e0;
+  z-index: -1;
+  border-radius: inherit;
+  transform: rotate(160deg);
+  transform-origin: right;
+  transition: 0.5s;
+}
+
+.dropdown .items a:hover span {
+  transform: rotate(0deg);
+}
+
+/* About Section */
+.about {
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.card p {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Services Section */
+.services {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-card {
+  background-color: #eaeaea;
+  padding: 30px;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #666;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #ff6347;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ff4500;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 50px;
+}
+.social-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: #7d2ae8;
+  border-radius: 50%;
+  margin-right: 22px;
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid #fff;
+  outline: 2px solid #7d2ae8;
+  transition: 0.3s;
+}
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+.social-icons a i {
+  color: #fff;
+}
+/* Footer styles */
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Khoảng cách giữa các nút */
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Facebook button */
+.contact-btn.facebook {
+  background-color: #4267b2;
+}
+
+.contact-btn.facebook:hover {
+  background-color: #365899;
+}
+
+/* Zalo button */
+.contact-btn.zalo {
+  background-color: #0084ff;
+}
+
+.contact-btn.zalo:hover {
+  background-color: #006ad1;
+}
+
+/* SMS button */
+.contact-btn.sms {
+  background-color: #4caf50;
+}
+
+.contact-btn.sms:hover {
+  background-color: #388e3c;
+}
